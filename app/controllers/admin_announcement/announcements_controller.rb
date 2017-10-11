@@ -14,8 +14,12 @@ module AdminAnnouncement
     end
 
     def create
-      @announcement = AdminAnnouncement::Announcement.create(announcement_params)
-      redirect_to root_path
+      @announcement = AdminAnnouncement::Announcement.new(announcement_params)
+      if @announcement.save
+        redirect_to root_path
+      else
+        render :new
+      end
     end
 
     def edit

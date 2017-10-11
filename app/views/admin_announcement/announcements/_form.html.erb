@@ -1,4 +1,13 @@
 <%= form_for @announcement, html: {class: 'form-horizontal'} do |f| %>
+    <ul class="form-group">
+      <% if @announcement.errors.any? %>
+          <div class="errors" align="center">
+          <% @announcement.errors.full_messages.each do |message| %>
+                <li style="color: red;"><%= message %></li>
+          <% end %>
+          </div>
+      <% end %>
+    </ul>
     <div class="form-group">
       <%= f.label :message, class: 'control-label col-sm-4' %>
       <div class="col-sm-4">
