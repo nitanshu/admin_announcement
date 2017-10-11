@@ -1,5 +1,5 @@
 function hide_announcement_panel(){
-    if ($('.notices .notice_panel').length == 0) {
-        $('.notices').hide();
+    if ($('.announcement .announcement_panel').length == 0) {
+        $('.announcement').hide();
     }
 }
