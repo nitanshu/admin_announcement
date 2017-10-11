@@ -2,7 +2,7 @@
     <div class="form-group">
       <%= f.label :message, class: 'control-label col-sm-4' %>
       <div class="col-sm-4">
-        <%= f.text_field :message, class: 'form-control', placeholder: 'Write a announcement' %>
+        <%= f.text_field :message, class: 'form-control', placeholder: 'Announce something...' %>
       </div>
     </div>
     <div class="form-group">
@@ -57,9 +57,9 @@
     <div class="actions">
       <div class="col-sm-offset-4 col-sm-4">
         <% if params[:action] == 'edit' %>
-            <%= f.submit 'Edit announcement', class: 'btn btn-default' %>
+            <%= f.submit 'Edit Announcement', class: 'btn btn-default' %>
         <% else %>
-            <%= f.submit 'Place announcement', class: 'btn btn-default' %>
+            <%= f.submit 'Place Announcement', class: 'btn btn-default' %>
         <% end %>
       </div>
     </div>
