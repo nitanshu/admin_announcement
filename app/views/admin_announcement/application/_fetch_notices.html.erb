@@ -1,0 +1,7 @@
+<div class="announcements">
+    <% if @announcements %>
+        <% @announcements.each do |user_announcement| %>
+            <%= render partial: 'admin_announcement/application/announcement', locals: {user_announcement: user_announcement} %>
+        <% end %>
+    <% end %>
+</div>

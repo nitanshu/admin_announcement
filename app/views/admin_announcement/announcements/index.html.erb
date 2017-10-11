@@ -1,0 +1,40 @@
+<div class="panel panel-default">
+  <div class="panel-heading text-center"> <%= link_to 'New Announcement', new_announcement_path, class: 'pull-right' %> All
+    announcements
+  </div>
+  <table class="table">
+    <thead>
+    <tr>
+      <th>id</th>
+      <th>message</th>
+      <th>active</th>
+      <th>background_color</th>
+      <th>font_color</th>
+      <th>font_size</th>
+      <th>text_align</th>
+      <th>cross_button_color</th>
+      <th>z_index</th>
+      <th>base</th>
+      <th>Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% @announcements.all.each do |announcement| %>
+        <tr>
+          <td><%= announcement.id %></td>
+          <td><%= announcement.message %></td>
+          <td><%= announcement.active %></td>
+          <td><%= announcement.background_color %></td>
+          <td><%= announcement.font_color %></td>
+          <td><%= announcement.font_size %></td>
+          <td><%= announcement.text_align %></td>
+          <td><%= announcement.cross_button_color %></td>
+          <td><%= announcement.z_index %></td>
+          <td><%= announcement.base %></td>
+          <td><%= link_to 'Edit', edit_announcement_path(announcement) %>
+            <%= link_to 'Delete', announcement, action: :delete, method: :delete %></td>
+        </tr>
+    <% end %>
+    </tbody>
+  </table>
+</div>

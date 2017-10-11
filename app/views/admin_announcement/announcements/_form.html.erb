@@ -1,0 +1,66 @@
+<%= form_for @announcement, html: {class: 'form-horizontal'} do |f| %>
+    <div class="form-group">
+      <%= f.label :message, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :message, class: 'form-control', placeholder: 'Write a announcement' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :background_color, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :background_color, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :font_color, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :font_color, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :font_size, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :font_size, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :text_align, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :text_align, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :cross_button_color, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :cross_button_color, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :z_index, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.text_field :z_index, class: 'form-control' %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :active, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        <%= f.check_box :active %>
+      </div>
+    </div>
+    <div class="form-group">
+      <%= f.label :base, class: 'control-label col-sm-4' %>
+      <div class="col-sm-4">
+        Session <%= f.radio_button :base, 'session', checked: true %>
+        Cookie <%= f.radio_button :base, 'cookie' %>
+      </div>
+    </div>
+    <div class="actions">
+      <div class="col-sm-offset-4 col-sm-4">
+        <% if params[:action] == 'edit' %>
+            <%= f.submit 'Edit announcement', class: 'btn btn-default' %>
+        <% else %>
+            <%= f.submit 'Place announcement', class: 'btn btn-default' %>
+        <% end %>
+      </div>
+    </div>
+<% end %>
