@@ -1,5 +1,5 @@
 AdminAnnouncement::Engine.routes.draw do
-  root "announcements#index"
+  root 'announcements#index'
 
   resources :announcements do
     member do
