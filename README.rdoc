@@ -15,19 +15,13 @@ And then execute:
 
 <tt>$ bundle install</tt>
 
-Install migrations:
-
-<tt>$ rake admin_announcement:install:migrations</tt>
-
 Migrate:
 
 <tt>$ rake db:migrate</tt>
 
 == Usage
 
-To use this gem you just need to mount it in your route file *config/routes.rb*
-
-<tt>mount AdminAnnouncement::Engine => '/announcement'</tt>
+Now you can access this admin annoucement dashboard on */announcement* path.
 
 Place the helper method according to your requirement in any layout or any view page where you want to place your announcement.
 
@@ -59,7 +53,7 @@ Please ensure that only admin can access this admin_announcement panel to do tha
 
 You can configure *background_color*, *font_color*, *font_size*, *text_alignment*, *z_index* and even *cross_button_color* of that announcement.
 
-Admin also can disable the announcement when it is no longer required.
+Admin also can disable the announcements whenever it is no longer required.
 
 === Disable 
 
